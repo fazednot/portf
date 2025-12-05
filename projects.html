@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Abraham.dev</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html">Abraham<span>.dev</span></a>
+      </div>
+
+      <button id="nav-toggle" class="hamburger"
+        aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul id="nav-menu" class="nav-menu" aria-hidden="true">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="assets/images/proj1.jpg" alt="Netflix Clone">
+          <div class="project-overlay">
+            <h3>Netflix Clone</h3>
+            <p>Responsive landing page with CSS Grid & hover effects.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/proj2.jpg" alt="E-commerce Store">
+          <div class="project-overlay">
+            <h3>E-commerce Store</h3>
+            <p>Product grid layout using Flexbox, fully responsive.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/proj3.jpg" alt="Weather App UI">
+          <div class="project-overlay">
+            <h3>Weather App UI</h3>
+            <p>Dynamic card design with animations & media queries.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/proj4.jpg" alt="Blog Platform">
+          <div class="project-overlay">
+            <h3>Blog Platform</h3>
+            <p>Clean typography & responsive article layout.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/proj5.jpg" alt="Portfolio Template">
+          <div class="project-overlay">
+            <h3>Portfolio Template</h3>
+            <p>Hero section with video background & hover transitions.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/proj6.jpg" alt="Chat App UI">
+          <div class="project-overlay">
+            <h3>Chat App UI</h3>
+            <p>Mobile-first messaging UI with custom CSS variables.</p>
+            <a href="#" class="project-btn">View Live →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>© December 2025 Abraham Nigatu</footer>
+
+  <!-- NAV SCRIPT -->
+  <script>
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const navbar = document.querySelector('.navbar');
+      const menu = document.getElementById('nav-menu');
+
+      function sync(open){
+        btn.setAttribute('aria-expanded', open);
+        menu.setAttribute('aria-hidden', !open);
+      }
+
+      btn.addEventListener('click', function(){
+        const open = navbar.classList.toggle('nav-open');
+        sync(open);
+      });
+
+      menu.querySelectorAll('a').forEach(a => 
+        a.addEventListener('click', () => {
+          navbar.classList.remove('nav-open');
+          sync(false);
+        })
+      );
+    })();
+  </script>
+
+</body>
+</html>
