@@ -1,18 +1,13 @@
 :root {
     --primary: #00ff9d;
-    /* Accent color */
     --dark: #0a0a0a;
-    /* Background */
     --darker: #000000;
-    /* Sections */
+
     --light: #ffffff;
-    /* Text */
     --gray: #aaaaaa;
-    /* Subtext */
     --transition: all 0.4s ease;
 }
 
-/* Reset & Base (Mobile-First) */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +25,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     font-size: 16px;
-    /* Base font size */
 }
 
 h1,
@@ -47,9 +41,6 @@ h4 {
     padding: 0 1rem;
 }
 
-/* Small padding for mobile */
-
-/* NAVBAR – Professional & Clean */
 .navbar {
     position: fixed;
     top: 0;
@@ -84,7 +75,6 @@ h4 {
     color: var(--primary);
 }
 
-/* Hamburger */
 .hamburger {
     margin-left: auto;
     background: rgba(255, 255, 255, 0.04);
@@ -103,7 +93,7 @@ h4 {
     background: rgba(255,255,255,0.09);
 }
 
-/* Mobile Menu */
+
 .nav-menu {
     position: absolute;
     top: 100%;
@@ -155,25 +145,7 @@ h4 {
     width: 100%;
 }
 
-/* Desktop */
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
 
-    .nav-menu {
-        all: unset;
-        display: flex;
-        gap: 2.5rem;
-        margin-left: auto;
-    }
-
-    .nav-menu a {
-        font-size: 1rem;
-    }
-}
-
-/* Hero (Mobile-First: Smaller text, full-width) */
 .hero {
     position: relative;
     height: 100vh;
@@ -224,7 +196,6 @@ h4 {
 
 .hero p {
     font-size: 1.2rem;
-    /* Mobile size */
     color: var(--primary);
     margin: 1rem 0 2rem;
 }
@@ -232,7 +203,6 @@ h4 {
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    /* Smaller for mobile */
     background: var(--primary);
     color: black;
     font-weight: bold;
@@ -245,12 +215,8 @@ h4 {
     transform: scale(1.05);
 }
 
-/* Subtler scale for pro feel */
-
-/* Stats (Mobile-First: Single column grid) */
 .stats {
     padding: 5rem 0;
-    /* Less padding on mobile */
     background: var(--darker);
     text-align: center;
 }
@@ -258,13 +224,11 @@ h4 {
 .stats-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* Stack on mobile */
     gap: 2rem;
 }
 
 .stat h3 {
     font-size: 3rem;
-    /* Mobile size */
     color: var(--primary);
 }
 
@@ -273,7 +237,6 @@ h4 {
     color: var(--gray);
 }
 
-/* Projects (Mobile-First: Single column) */
 .projects {
     padding: 5rem 0;
 }
@@ -281,7 +244,6 @@ h4 {
 .projects h2 {
     text-align: center;
     font-size: 3rem;
-    /* Mobile size */
     margin-bottom: 2rem;
     color: var(--primary);
 }
@@ -289,7 +251,6 @@ h4 {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* Stack on mobile */
     gap: 2rem;
 }
 
@@ -298,7 +259,6 @@ h4 {
     overflow: hidden;
     border-radius: 12px;
     height: 300px;
-    /* Adjusted for mobile */
 }
 
 .project-card img {
@@ -347,7 +307,6 @@ h4 {
     font-weight: bold;
 }
 
-/* Contact (Mobile-First: Centered, smaller text) */
 .contact {
     padding: 5rem 0;
     text-align: center;
@@ -392,7 +351,6 @@ h4 {
     background: linear-gradient(135deg, rgba(0, 255, 157, 0.12), rgba(0, 255, 157, 0.06));
 }
 
-/* Accessibility helper: visually hidden but available to screen readers */
 .sr-only {
     position: absolute !important;
     width: 1px;
@@ -405,15 +363,12 @@ h4 {
     border: 0;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
     background: black;
     font-size: 0.9rem;
 }
-
-/* Media Queries: Enhance for Tablet/Desktop (min-width) */
 @media (min-width: 768px) {
     .container {
         padding: 0 2rem;
@@ -428,12 +383,16 @@ footer {
     }
 
     .nav-menu {
+        all: unset;
+        display: flex;
+        gap: 3rem;
+        margin-left: auto;
+
         position: static;
         height: auto;
         width: auto;
         background: none;
         flex-direction: row;
-        gap: 3rem;
         max-height: none;
         overflow: visible;
     }

@@ -31,7 +31,7 @@
     </div>
   </nav>
 
-  <!-- PROJECTS -->
+
   <section class="projects">
     <div class="container">
       <h2>My Projects</h2>
@@ -98,31 +98,8 @@
 
   <footer>© December 2025 Abraham Nigatu</footer>
 
-  <!-- NAV SCRIPT -->
-  <script>
-    (function(){
-      const btn = document.getElementById('nav-toggle');
-      const navbar = document.querySelector('.navbar');
-      const menu = document.getElementById('nav-menu');
+  
 
-      function sync(open){
-        btn.setAttribute('aria-expanded', open);
-        menu.setAttribute('aria-hidden', !open);
-      }
-
-      btn.addEventListener('click', function(){
-        const open = navbar.classList.toggle('nav-open');
-        sync(open);
-      });
-
-      menu.querySelectorAll('a').forEach(a => 
-        a.addEventListener('click', () => {
-          navbar.classList.remove('nav-open');
-          sync(false);
-        })
-      );
-    })();
-  </script>
 
 </body>
 </html>
