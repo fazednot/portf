@@ -55,12 +55,16 @@ h4 {
     padding: 0.9rem 1.2rem;
 }
 
+
 .navbar-inner {
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+.navbar-inner ul{
+    list-style: none;
 }
 
 .logo a {
